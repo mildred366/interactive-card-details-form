@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <link rel="stylesheet" href="./Css/theStyles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
+  <title>Interactive card details form</title>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <main>
+      <div class="mainContainer">
+        <div class="imageDiv">
+          <img src="./images/bg-main-desktop.png" alt="background" class="backgroundImage" width="28%" height="100%" />
+          <div>
+            <img class="image1" src="./images/bg-card-front.png" alt="frontCard" width="30%" />
+            <div id="empty1"></div>
+            <div id="empty2"></div>
+            <div id="number">
+              <p>0000 0000 0000 0000</p>
+            </div>
+            <div id="name">
+              <div id="cardName" class="card-details">Jane Appleseed</div>
+              <div style="margin-left: 10.5rem;">
+                <p class="card-details"><span id="cardMonth">00</span>/<span id="cardYear">00</span></p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img class="image2" src="./images/bg-card-back.png" alt="backCard" width="30%" />
+            <div id="number1">
+              <p class="card-details">000</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="formDiv">
+          <form name="card-entry-form" class="formGroup">
+            <div class="form-Group">
+              <label for="Cname">Cardholder Name</label>
+              <input type="text" id="input1" name="Cname" placeholder="e.g. Jane Appleseed" class="formInput">
+              <div class="error" id="name-error"></div>
+            </div>
+
+            <div class="form-Group">
+              <label for="Cnumber">Card Number</label>
+              <input type="text" id="input2" name="Cnumber" placeholder="e.g. 1234 5678 1234 0000"
+                class="formInput" maxlength="19" />
+              <div class="error" id="number-error"></div>
+            </div>
+
+            <div id="form-container">
+              <div class="form-Group1" style="margin-bottom: 0rem;">
+                <label for="Mnum">Exp. Date(MM/YY)</label>
+                <input type="text" class="input3 formInput" name="Mnum" placeholder="MM" maxlength="2" />
+                <!-- <input type="text" class="input3 formInput" name="Ynum" placeholder="YY" maxlength="2" /> -->
+                <div class="error date-error"></div>
+              </div>
+
+              <div class="form-Group1" style="margin-bottom: 0rem;">
+                <input type="text" class="input3 input3i formInput" name="Ynum" placeholder="YY" maxlength="2" />
+                <div class="error date-error"></div>
+              </div>
+
+              <div class="form-Group1 formGroupInputLast" style="margin-left: .9rem;">
+                <label for="cvv">cvv</label>
+                <input type="text" id="input4" class="formInput" name="cvc" placeholder="e.g. 123" maxlength="3" />
+                <div class="error" id="cvc-error"></div>
+              </div>
+            </div>
+          </form>
+          <button id="submitBtn">Confirm</button>
+        </div>
+
+        <div id="confirmation">
+          <figure>
+            <img src="images/icon-complete.svg" alt="check mark">
+          </figure>
+          <h1>Thank you!</h1>
+          <p>We've added your card details</p>
+          <button id="continue">Continue</button>
+        </div>
+      </div>
+    </main>
+  </div>
+  </div>
+  <div class="attribution">
+    Challenge completed by <a href="https://www.linkedin.com/in/mildred-erubore/" target="_blank">Mildred</a>.
+  </div>
+  <script src="./Js/theScript.js"></script>
+</body>
+
+</html>
+
+<!-- Confirm
+        -->
